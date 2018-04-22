@@ -43,7 +43,7 @@ int main()
 
     */
 
-    double volumen, volumen2, volumen3;
+    double volumen;
 
     Quader meinQuader(10.0,20.0,30.0);
     Quader* meinQuaderZeiger;

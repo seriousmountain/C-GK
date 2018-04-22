@@ -8,10 +8,9 @@
 class Quader : public Rechteck {
 public:
 
-    Quader(){}
+    Quader();
     Quader(double laenge, double breite, double hoehe)
-        : m_laenge(laenge), m_breite(breite), m_hoehe(hoehe)
-    {}
+        : m_laenge(laenge), m_breite(breite), m_hoehe(hoehe){}
 
     /*
     Quader (double laenge = 10.0, double hoehe = 10.0, double breite = 10.0){
