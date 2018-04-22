@@ -5,9 +5,11 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     rechteck.cpp \
-    quadrat.cpp
+    quadrat.cpp \
+    quader.cpp
 
 HEADERS += \
     rechteck.h \
-    quadrat.h
+    quadrat.h \
+    quader.h
 

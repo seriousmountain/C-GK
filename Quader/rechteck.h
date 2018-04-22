@@ -13,7 +13,7 @@ public:
 
         double getFlaecheninhalt();
 
-private:
+protected:
         double m_breite;
         double m_flaecheninhalte;
 };
