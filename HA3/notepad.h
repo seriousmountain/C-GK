@@ -2,6 +2,9 @@
 #define NOTEPAD_H
 
 #include <QMainWindow>
+#include <QStatusBar>
+#include <QPushButton>
+#include <QMessageBox>
 
 namespace Ui {
 class Notepad;
@@ -40,9 +43,18 @@ private slots:
 
     void on_actionFont_triggered();
 
+    void createStatusBar();
+
+    void createWarning();
+
+
+
+
+
 private:
     Ui::Notepad *ui;
     QString currentFile;
+    QPushButton *m_button;
 };
 
 #endif // NOTEPAD_H

@@ -6,6 +6,7 @@
 #include <QPrinter>
 #include <QPrintDialog>
 #include <QFontDialog>
+#include <QLabel>
 
 Notepad::Notepad(QWidget *parent) :
     QMainWindow(parent),
@@ -13,6 +14,14 @@ Notepad::Notepad(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setCentralWidget(ui->textEdit);
+
+    ui->statusBar->showMessage("Application started");
+    m_button = new QPushButton("Clear Message");
+    ui->statusBar->addPermanentWidget(m_button);
+    connect(m_button, SIGNAL (clicked()),statusBar(), SLOT (clearMessage()));
+    connect(m_button, SIGNAL (clicked()), this, SLOT (createWarning()));
+
+
 }
 
 Notepad::~Notepad()
@@ -134,3 +143,16 @@ void Notepad::on_actionFont_triggered()
     if (fontSelected)
     ui->textEdit->setFont(font);
 }
+
+void Notepad::createStatusBar()
+{
+}
+
+void Notepad::createWarning()
+{
+    QMessageBox warningBox;
+    warningBox.setText("Nachricht wurde entfernt!");
+    warningBox.exec();
+}
+
+
